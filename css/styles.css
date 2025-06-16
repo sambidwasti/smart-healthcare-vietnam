@@ -1,6 +1,7 @@
 body {
   margin: 0;
   font-family: Arial, sans-serif;
+  background-color: lightblue;
 }
 
 header {
@@ -46,18 +47,22 @@ header {
 .dropdown-menu {
   display: none;
   position: absolute;
-  top: 2.5rem;
+  top: 100%;
+  left: 0;
   background-color: #0275d8;
   list-style: none;
   padding: 0.5rem 0;
   border-radius: 5px;
+  min-width: 160px;
+  z-index: 1000;
 }
 
 .dropdown-menu li {
   padding: 0.5rem 1rem;
 }
 
-.dropdown:hover .dropdown-menu {
+.dropdown:hover .dropdown-menu,
+.dropdown-menu:hover {
   display: block;
 }
 
@@ -70,3 +75,6 @@ footer {
   text-align: center;
   padding: 1rem;
 }
+/* body {
+  background-color: lightblue;
+} */
