@@ -5,30 +5,53 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>EHR</title>
   <link rel="stylesheet" href="css/styles.css" />
-  <style>
-    main {
-      background-color: #f8f8f8;
-      min-height: 60vh;
-      padding: 2rem;
-    }
-  </style>
 </head>
 <body>
-  <div id="navbar-container">
-    <!-- Navbar should load here -->
-  </div>
 
-  <main>
-    <h1>Electronic Health Records (EHR)</h1>
-    <p>Electronic Health Records (EHR) are secure digital systems used to collect, store, and manage patients' medical histories. They provide healthcare providers with accurate, up-to-date information at the point of care, enhancing the efficiency, quality, and safety of patient treatment.</p>
+  <header>
+    <div class="banner">
+      <img src="img/logo.png" alt="HealthHub Vietnam Logo" class="logo" />
+      <span class="site-title">Smart Healthcare Center</span>
+      <nav class="navbar">
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li class="dropdown">
+            <a href="#">Services ▾</a>
+            <ul class="dropdown-menu">
+              <li><a href="telemedicine.html">Telemedicine</a></li>
+              <li><a href="ehr.html">EHR</a></li>
+              <li><a href="maternity.html">Maternity Alerts</a></li>
+            </ul>
+          </li>
+          <li><a href="records.html">Records</a></li>
+          <li><a href="login.html">Login</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
 
-    <p>By centralizing medical data, EHRs reduce paperwork, minimize errors, and improve coordination among healthcare workers. This system supports better clinical decisions, facilitates follow-up care, and ensures seamless communication across different levels of the healthcare system.</p>
+  <main style="background-image: linear-gradient(to right, #f0f8ff, #e0f7fa); padding: 2rem; min-height: 60vh;">
+    <h1 style="color: #0275d8; text-align: center;">Electronic Health Records (EHR)</h1>
+    <div style="display: flex; flex-wrap: wrap; gap: 2rem; align-items: center; justify-content: center;">
+      <img src="img/slide2-ehr.png" alt="EHR Illustration" style="max-width: 300px; height: auto; border-radius: 8px;" />
+      <div style="max-width: 600px;">
+        <p>Electronic Health Records (EHR) are secure digital systems used to collect, store, and manage patients' medical histories. They provide healthcare providers with accurate, up-to-date information at the point of care, enhancing the efficiency, quality, and safety of patient treatment.</p>
+
+        <p>By centralizing medical data, EHRs reduce paperwork, minimize errors, and improve coordination among healthcare workers. This system supports better clinical decisions, facilitates follow-up care, and ensures seamless communication across different levels of the healthcare system.</p>
+      </div>
+    </div>
+
+    <p style="text-align: center; font-style: italic; margin-top: 2rem;">
+      To view your records, please <a href="login.html" style="color: #0275d8; font-weight: bold;">login</a>.
+    </p>
   </main>
 
   <footer>
     <p>&copy; 2025 HealthHub Vietnam</p>
   </footer>
 
+  <script src="js/auth.js"></script>
   <script src="js/script.js"></script>
 </body>
 </html>

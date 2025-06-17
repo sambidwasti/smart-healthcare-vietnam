@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Patient Portal</title>
+  <link rel="stylesheet" href="css/styles.css" />
+  <style>
+    .tabs {
+      display: flex;
+      justify-content: center;
+      margin-top: 2rem;
+      gap: 1rem;
+    }
+    .tab-button {
+      padding: 10px 20px;
+      border: none;
+      background-color: #0275d8;
+      color: white;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+    .tab-content {
+      display: none;
+      padding: 2rem;
+    }
+    .tab-content.active {
+      display: block;
+    }
+    table {
+      width: 90%;
+      margin: 1rem auto;
+      border-collapse: collapse;
+    }
+    th, td {
+      padding: 12px;
+      border: 1px solid #ccc;
+      text-align: center;
+    }
+    th {
+      background-color: #0275d8;
+      color: white;
+    }
+  </style>
+  <script>
+    const role = localStorage.getItem('role');
+    const userId = localStorage.getItem('id');
+    if (role !== 'patient') {
+      window.location.href = 'login.html';
+    }
+  </script>
+</head>
+<body>
+
+  <header>
+    <div class="banner">
+      <img src="img/logo.png" alt="HealthHub Vietnam Logo" class="logo" />
+      <span class="site-title">Smart Healthcare Center</span>
+      <nav class="navbar">
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="login.html">Logout</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="tabs">
+      <button class="tab-button" onclick="showTab('info')">Patient Info</button>
+      <button class="tab-button" onclick="showTab('ehr')">EHR</button>
+      <button class="tab-button" onclick="showTab('billing')">Billing</button>
+      <button class="tab-button" onclick="showTab('request')">New Service Request</button>
+    </div>
+
+    <div id="info" class="tab-content active">
+      <h2 style="text-align:center">Patient Information</h2>
+      <table>
+        <tr><th>ID</th><th>Name</th><th>Sex</th><th>Age</th><th>DOB</th></tr>
+        <tr>
+          <td><script>document.write(localStorage.getItem('id'))</script></td>
+          <td>Nguyen Thi Lan</td>
+          <td>Female</td>
+          <td>34</td>
+          <td>1991-02-18</td>
+        </tr>
+      </table>
+    </div>
+
+    <div id="ehr" class="tab-content">
+      <h2 style="text-align:center">Electronic Health Records</h2>
+      <table>
+        <tr><th>Date</th><th>Condition</th><th>Medication</th><th>Doctor</th></tr>
+        <tr><td>2025-04-10</td><td>Hypertension</td><td>Lisinopril</td><td>Dr. Tran</td></tr>
+        <tr><td>2025-05-15</td><td>Diabetes Type II</td><td>Metformin</td><td>Dr. Le</td></tr>
+      </table>
+    </div>
+
+    <div id="billing" class="tab-content">
+      <h2 style="text-align:center">Billing Information</h2>
+      <table>
+        <tr><th>Service</th><th>Date</th><th>Amount</th><th>Status</th></tr>
+        <tr><td>General Consultation</td><td>2025-04-10</td><td>$25</td><td>Paid</td></tr>
+        <tr><td>Blood Test</td><td>2025-05-15</td><td>$40</td><td>Unpaid</td></tr>
+      </table>
+    </div>
+
+    <div id="request" class="tab-content">
+      <h2 style="text-align:center">Request a New Service</h2>
+      <form style="max-width: 500px; margin: auto;">
+        <label for="service">Service Requested:</label>
+        <input type="text" id="service" name="service" required style="width:100%; padding:10px; margin-bottom: 1rem;" />
+        <label for="description">Description:</label>
+        <textarea id="description" name="description" rows="4" required style="width:100%; padding:10px;"></textarea>
+        <button type="submit" style="margin-top: 1rem; padding: 10px 20px; background-color: #0275d8; color: white; border: none; border-radius: 5px;">Submit Request</button>
+      </form>
+    </div>
+  </main>
+
+  <footer>
+    <p style="text-align:center">&copy; 2025 HealthHub Vietnam</p>
+  </footer>
+
+  <script>
+    function showTab(id) {
+      document.querySelectorAll('.tab-content').forEach(tab => tab.classList.remove('active'));
+      document.getElementById(id).classList.add('active');
+    }
+
+    const params = new URLSearchParams(window.location.search);
+    const tab = params.get('tab');
+    if (tab) showTab(tab);
+  </script>
+  <script src="js/auth.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>

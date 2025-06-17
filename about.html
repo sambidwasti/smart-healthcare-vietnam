@@ -7,19 +7,42 @@
   <link rel="stylesheet" href="css/styles.css" />
 </head>
 <body>
-  <div id="navbar-container"></div>
+
+  <header>
+    <div class="banner">
+      <img src="img/logo.png" alt="HealthHub Vietnam Logo" class="logo" />
+      <span class="site-title">Smart Healthcare Center</span>
+      <nav class="navbar">
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li class="dropdown">
+            <a href="#">Services ▾</a>
+            <ul class="dropdown-menu">
+              <li><a href="telemedicine.html">Telemedicine</a></li>
+              <li><a href="ehr.html">EHR</a></li>
+              <li><a href="maternity.html">Maternity Alerts</a></li>
+            </ul>
+          </li>
+          <li><a href="records.html">Records</a></li>
+          <li><a href="login.html">Login</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
 
   <main>
     <h1>About the Smart ICT Healthcare Center</h1>
-    <p>The Smart ICT Healthcare Center is a digital initiative aimed at improving access to medical services in underserved and rural areas of Vietnam. By integrating technologies such as telemedicine, electronic health records (EHR), and automated maternal alerts, the project empowers local clinics and health workers to deliver faster, smarter, and more reliable healthcare solutions.</p>
+    <p>The Smart ICT Healthcare Center is a transformative initiative dedicated to enhancing healthcare access in rural and underserved regions of Vietnam. It integrates digital technologies—including telemedicine, electronic health records (EHR), and maternal health alert systems—to support local clinics and improve care delivery.</p>
 
-    <p>Through real-time remote consultations, secure digital records, and timely notifications for expectant mothers, this platform addresses key challenges in modern rural healthcare and enhances community well-being using sustainable digital innovation.</p>
+    <p>By enabling real-time consultations, digitizing patient data, and sending timely health alerts, the center empowers healthcare workers with modern tools and ensures better health outcomes for the community. This project represents a sustainable step toward bridging healthcare disparities using smart, scalable ICT solutions.</p>
   </main>
 
   <footer>
     <p>&copy; 2025 HealthHub Vietnam</p>
   </footer>
 
+  <script src="js/auth.js"></script>
   <script src="js/script.js"></script>
 </body>
 </html>

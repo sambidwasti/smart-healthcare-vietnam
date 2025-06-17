@@ -5,20 +5,76 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Home</title>
   <link rel="stylesheet" href="css/styles.css" />
+  <style>
+    .slider-container {
+      overflow: hidden;
+      width: 100%;
+      margin-bottom: 2rem;
+    }
+    .slider-track {
+      display: flex;
+      animation: scroll 20s linear infinite;
+    }
+    .slider-track img {
+      height: 280px;
+      margin-right: 30px;
+      border-radius: 10px;
+    }
+    @keyframes scroll {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-100%); }
+    }
+  </style>
 </head>
-
 <body>
-  <div id="navbar-container"></div>
 
-  <section id="home">
-    <h1>Welcome to the Smart Healthcare Center</h1>
-    <p>Improving healthcare access in rural Vietnam using digital tools.</p>
-  </section>
+  <header>
+    <div class="banner">
+      <img src="img/logo.png" alt="HealthHub Vietnam Logo" class="logo" />
+      <span class="site-title">Smart Healthcare Center</span>
+      <nav class="navbar">
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li class="dropdown">
+            <a href="#">Services ▾</a>
+            <ul class="dropdown-menu">
+              <li><a href="telemedicine.html">Telemedicine</a></li>
+              <li><a href="ehr.html">EHR</a></li>
+              <li><a href="maternity.html">Maternity Alerts</a></li>
+            </ul>
+          </li>
+          <li><a href="records.html">Records</a></li>
+          <li><a href="login.html">Login</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main style="display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; height: 90vh; background: linear-gradient(to right, #f0f8ff, #e0f7fa); padding: 2rem; overflow: hidden;">
+    <div class="slider-container">
+      <div class="slider-track">
+        <img src="img/slide1-telemedicine.png" alt="Clinic 1" />
+        <img src="img/slide2-ehr.png" alt="Clinic 2" />
+        <img src="img/slide3.jpg" alt="Clinic 3" />
+        <img src="img/slide4.jpg" alt="Clinic 4" />
+        <!-- Repeat images for seamless loop -->
+        <img src="img/slide1-telemedicine.png" alt="Clinic 1 repeat" />
+        <img src="img/slide2-ehr.png" alt="Clinic 2 repeat" />
+        <img src="img/slide3.jpg" alt="Clinic 3 repeat" />
+        <img src="img/slide4.jpg" alt="Clinic 4 repeat" />
+      </div>
+    </div>
+
+    <h1 style="font-size: 3rem; color: #0275d8; margin-bottom: 1rem;">Smart Healthcare Center</h1>
+    <p style="font-size: 1.5rem; max-width: 800px;">Empowering rural Vietnam with modern digital healthcare. Real-time consultations, mobile diagnostics, and accessible health records—all in one place.</p>
+  </main>
 
   <footer>
     <p>&copy; 2025 HealthHub Vietnam</p>
   </footer>
 
+  <script src="js/auth.js"></script>
   <script src="js/script.js"></script>
 </body>
 </html>

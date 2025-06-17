@@ -1,0 +1,5 @@
+username,password,role,id
+admin,admin123,doctor,D001
+nurse,nursepass,doctor,D002
+user1,pass1,patient,P001
+user2,secure456,patient,P002

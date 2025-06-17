@@ -7,17 +7,46 @@
   <link rel="stylesheet" href="css/styles.css" />
 </head>
 <body>
-  <div id="navbar-container"></div>
 
-  <main>
-    <h1>Welcome to Our Telemedicine Service</h1>
-    <p>Providing accessible healthcare through technology.</p>
+  <header>
+    <div class="banner">
+      <img src="img/logo.png" alt="HealthHub Vietnam Logo" class="logo" />
+      <span class="site-title">Smart Healthcare Center</span>
+      <nav class="navbar">
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li class="dropdown">
+            <a href="#">Services ▾</a>
+            <ul class="dropdown-menu">
+              <li><a href="telemedicine.html">Telemedicine</a></li>
+              <li><a href="ehr.html">EHR</a></li>
+              <li><a href="maternity.html">Maternity Alerts</a></li>
+            </ul>
+          </li>
+          <li><a href="records.html">Records</a></li>
+          <li><a href="login.html">Login</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main style="background: linear-gradient(to right, #e3f2fd, #e1f5fe); padding: 2rem; text-align: center;">
+    <h1 style="font-size: 2.5rem; color: #0275d8;">Welcome to Our Telemedicine Service</h1>
+    <p style="font-size: 1.25rem; max-width: 700px; margin: 1rem auto;">We provide accessible healthcare through secure virtual consultations. Connect with certified healthcare providers from anywhere in Vietnam.</p>
+
+    <img src="img/slide1-telemedicine.png" alt="Telemedicine Slide" style="max-width: 400px; margin-top: 2rem; border-radius: 10px;" />
+
+    <div style="margin-top: 2.5rem;">
+      <a href="login.html" style="background-color: #0275d8; color: white; padding: 12px 24px; border-radius: 8px; text-decoration: none; font-size: 1.1rem;">Login to Request a Telemedicine Appointment</a>
+    </div>
   </main>
 
   <footer>
     <p>&copy; 2025 HealthHub Vietnam</p>
   </footer>
 
+  <script src="js/auth.js"></script>
   <script src="js/script.js"></script>
 </body>
 </html>
