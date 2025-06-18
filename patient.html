@@ -69,6 +69,7 @@
   <main>
     <div class="tabs">
       <button class="tab-button" onclick="showTab('info')">Patient Info</button>
+      <button class="tab-button" onclick="showTab('dashboard')">Dashboard</button>
       <button class="tab-button" onclick="showTab('ehr')">EHR</button>
       <button class="tab-button" onclick="showTab('billing')">Billing</button>
       <button class="tab-button" onclick="showTab('request')">New Service Request</button>
@@ -86,6 +87,11 @@
           <td>1991-02-18</td>
         </tr>
       </table>
+    </div>
+
+    <div id="dashboard" class="tab-content">
+      <h2 style="text-align:center">Welcome to Your Dashboard</h2>
+      <img src="img/dashboard.png" alt="Dashboard Overview" style="display:block; margin:2rem auto; max-width:90%; border-radius:10px;" />
     </div>
 
     <div id="ehr" class="tab-content">

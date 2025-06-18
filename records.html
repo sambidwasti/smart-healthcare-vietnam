@@ -1,47 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Health Records</title>
-  <link rel="stylesheet" href="css/styles.css" />
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Doctor Records</title>
+  <link rel="stylesheet" href="css/styles.css"/>
+  <script>
+    const role = localStorage.getItem('role');
+    if (role !== 'doctor') {
+      window.location.href = 'login.html';
+    }
+  </script>
 </head>
 <body>
-
   <header>
     <div class="banner">
-      <img src="img/logo.png" alt="HealthHub Vietnam Logo" class="logo" />
+      <img src="img/logo.png" alt="HealthHub Vietnam Logo" class="logo"/>
       <span class="site-title">Smart Healthcare Center</span>
       <nav class="navbar">
         <ul class="nav-links">
           <li><a href="index.html">Home</a></li>
-          <li><a href="about.html">About</a></li>
-          <li class="dropdown">
-            <a href="#">Services ▾</a>
-            <ul class="dropdown-menu">
-              <li><a href="telemedicine.html">Telemedicine</a></li>
-              <li><a href="ehr.html">EHR</a></li>
-              <li><a href="maternity.html">Maternity Alerts</a></li>
-            </ul>
-          </li>
-          <li><a href="records.html">Records</a></li>
-          <li><a href="login.html">Login</a></li>
+          <li><a href="login.html">Logout</a></li>
         </ul>
       </nav>
     </div>
   </header>
-
   <main>
-    <h1>Health Records</h1>
-    <p>Secure storage and retrieval of patient records for better data management, sharing, and healthcare insights.</p>
-    <!-- Future table or data section can be added here -->
+    <h2 style="text-align:center; margin-top:2rem;">All Patient Records</h2>
+    <table style="width:90%; margin:2rem auto; border-collapse:collapse;">
+      <tr><th>ID</th><th>Name</th><th>Latest Condition</th><th>Last Visit</th></tr>
+      <tr><td>P001</td><td>Nguyen Thi Lan</td><td>Hypertension</td><td>2025-05-15</td></tr>
+      <!-- More rows as needed -->
+    </table>
   </main>
-
-  <footer>
-    <p>&copy; 2025 HealthHub Vietnam</p>
-  </footer>
-
+  <footer><p style="text-align:center">&copy; 2025 HealthHub Vietnam</p></footer>
   <script src="js/auth.js"></script>
-  <script src="js/script.js"></script>
 </body>
 </html>
